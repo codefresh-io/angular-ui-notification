@@ -70,7 +70,7 @@ angular.module('ui-notification').provider('Notification', function() {
                 // load it via $http only if it isn't default template and template isn't exist in template cache
                 // cache:true means cache it for later access.
                 $http.get(args.template,{cache: true})
-                   .then(function(response){
+                  .then(function(response){
                     processNotificationTemplate(response.data);
                   })
                   .catch(function(data){
